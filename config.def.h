@@ -1,5 +1,6 @@
-
+/* include */
 #include <X11/XF86keysym.h>
+#include <time.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -8,9 +9,9 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-    "monospace:size=14",
-    "WenQuanYi Micro Hei:size=16:type=Regular:antialias=true:autohint=true",
-    "Symbols Nerd Font:pixelsize=16:type=2048-em:antialias=true:autohint=true" };
+    "monospace:size=12",
+    "WenQuanYi Micro Hei:size=12:type=Regular:antialias=true:autohint=true",
+    "Symbols Nerd Font:pixelsize=12:type=2048-em:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -25,6 +26,9 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+/* Lockfile */
+static char lockfile[] = "/tmp/dwm.lock";
 
 static const Rule rules[] = {
 	/* xprop(1):
