@@ -1,5 +1,5 @@
 picom &
-
+#slstatus &
 
 
 
