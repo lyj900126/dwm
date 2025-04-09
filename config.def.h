@@ -12,8 +12,9 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = {
     "monospace:size=12",
-    "WenQuanYi Micro Hei:size=12:type=Regular:antialias=true:autohint=true",
-    "Symbols Nerd Font:pixelsize=12:type=2048-em:antialias=true:autohint=true" };
+    "WenQuanYi Micro Hei:size=14:type=Regular:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=16:type=Regular:antialias=true:autohint=true",
+    "Symbols Nerd Font:pixelsize=14:type=2048-em:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -70,11 +71,19 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
+
+static const char *volup[]  = { "/home/l/work/dwm/scripts/vol-up.sh", NULL };
+static const char *voldown[]  = { "/home/l/work/dwm/scripts/vol-down.sh", NULL };
+static const char *voltoggle[]  = { "/home/l/work/dwm/scripts/vol-toggle.sh", NULL };
+
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,          			XK_F1,     spawn,          {.v = volup } },
+	{ 0,                    	XK_F2,     spawn,          {.v = voldown } },
+	{ 0,                   		XK_F3,     spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
