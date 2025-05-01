@@ -28,15 +28,16 @@ cd ～/dwm && sudo make clean install
 
 ## 已打补丁
 ```
---restartsig热重启
---autostart自启动脚本
---hide_vacant_tags隐藏工作区
---scratchpad额外终端
---doublepressquit退出dwm需重复2次操作
---fullgaps窗口间距
---pertag保留工作区布局
---viewontag跟随窗口移动
---statuscmd发送信号补丁
+--restartsig        热重启
+--autostart         自启动脚本
+--hide_vacant_tags  隐藏工作区
+--scratchpad        额外终端
+--doublepressquit   退出dwm需重复2次操作
+--fullgaps          窗口间距
+--pertag            保留工作区布局
+--viewontag         跟随窗口移动
+--statuscmd         发送信号补丁
+--systray           系统托盘
 ```
 
 ## 常用快捷键
