@@ -38,6 +38,7 @@ cd ～/dwm && sudo make clean install
 --viewontag         跟随窗口移动
 --statuscmd         发送信号补丁
 --systray           系统托盘
+--fancybar          多窗口显示全部标题
 ```
 
 ## 常用快捷键
