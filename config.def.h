@@ -39,11 +39,21 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static char lockfile[] = "/tmp/dwm.lock";
 
 /* launcher commands (They must be NULL terminated) */
-static const char* surf[]      = { "surf", "duckduckgo.com", NULL };
+static const char* pcmanfm[]            = { "pcmanfm", NULL, NULL };
+static const char* edge[]               = { "microsoft-edge-stable", "https://nas.lxyun.top:13000", NULL };
+static const char* trilium[]            = { "trilium-cn", NULL, NULL };
+static const char* wechat[]             = { "wechat-universal", NULL, NULL };
+static const char* sunloginclient[]     = { "sunloginclient", NULL, NULL };
+static const char* watt_toolkit[]       = { "watt-toolkit", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
-	{ surf,         "surf" },
+	{ pcmanfm,           "" },
+	{ edge,              "" },
+	{ trilium,           "" },
+	{ wechat,            "" },
+	{ sunloginclient,    "󱟾" },
+	{ watt_toolkit,      "" },
 };
 
 static const Rule rules[] = {
@@ -94,9 +104,9 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,          			XK_F1,     spawn,          {.v = volup } },
-	{ 0,                    	XK_F2,     spawn,          {.v = voldown } },
-	{ 0,                   		XK_F3,     spawn,          {.v = voltoggle } },
+	{ 0,          	        		XK_F1,     spawn,          {.v = volup } },
+	{ 0,                          	XK_F2,     spawn,          {.v = voldown } },
+	{ 0,                    		XK_F3,     spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
@@ -109,7 +119,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
