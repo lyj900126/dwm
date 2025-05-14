@@ -38,6 +38,14 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
 
+/* launcher commands (They must be NULL terminated) */
+static const char* surf[]      = { "surf", "duckduckgo.com", NULL };
+
+static const Launcher launchers[] = {
+       /* command       name to display */
+	{ surf,         "surf" },
+};
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
