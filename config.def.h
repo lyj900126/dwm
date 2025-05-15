@@ -16,7 +16,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = {
-    "monospace:size=12",
+    "monospace:size=14",
     "WenQuanYi Micro Hei:size=14:type=Regular:antialias=true:autohint=true",
     "JoyPixels:pixelsize=16:type=Regular:antialias=true:autohint=true",
     "Symbols Nerd Font:pixelsize=14:type=2048-em:antialias=true:autohint=true" };
@@ -39,6 +39,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static char lockfile[] = "/tmp/dwm.lock";
 
 /* launcher commands (They must be NULL terminated) */
+static const char* rofi[]               = { "rofi", "-show", "drun" };
 static const char* pcmanfm[]            = { "pcmanfm", NULL, NULL };
 static const char* edge[]               = { "microsoft-edge-stable", "https://nas.lxyun.top:13000", NULL };
 static const char* trilium[]            = { "trilium-cn", NULL, NULL };
@@ -48,6 +49,7 @@ static const char* watt_toolkit[]       = { "watt-toolkit", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
+	{ rofi,              "" },
 	{ pcmanfm,           "" },
 	{ edge,              "" },
 	{ trilium,           "" },
