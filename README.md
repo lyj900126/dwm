@@ -16,7 +16,10 @@
 sudo pacman -S wqy-microhei ttf-nerd-fonts-symbols
 
 # alsa声音、bc计算器(计算网速)、rofi程序启动器
-sudo pacman -S alsa-utils bc rofi
+sudo pacman -S alsa-utils bc rofi 
+
+# mpd音乐播放器三件套
+sudo pacman -S mpd mpc ncmpcpp
 
 # 任务栏固定的程序为：rofi启动菜单、pcmanfm文件管理、edge浏览器、trilium笔记、微信、向日葵远程、steam加速器
 yay -S rofi pcmanfm microsoft-edge-stable-bin trilium-cn-bin wechat-universal-bwrap sunloginclient watt-toolkit-bin
@@ -69,5 +72,9 @@ cd ～/dwm && sudo make clean install
                             [F1]                        增加音量
                             [F2]                        减少音量
                             [F3]                        静音
-
+                            [Home]                      mpc play播放音乐
+                            [End]                       mpc stop停止播放音乐
+                            [Mod]+[Space]               mpc toggle继续播放/暂停播放
+                            [PgUp]                      mpc prev上一首
+                            [PgDown]                    mpc next下一首
 ```
