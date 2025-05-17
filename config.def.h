@@ -118,7 +118,7 @@ static const Key keys[] = {
 
 	{ 0,                            XK_Home,   spawn,          {.v = mpcplay } },
 	{ 0,                            XK_End,    spawn,          {.v = mpcstop } },
-	{ MODKEY,                       XK_space,  spawn,          {.v = mpctoggle } },
+	{ Mod4Mask,                     XK_space,  spawn,          {.v = mpctoggle } },
 	{ 0,                        XK_Page_Up,    spawn,          {.v = mpcprev } },
 	{ 0,                        XK_Page_Down,  spawn,          {.v = mpcnext } },
 
