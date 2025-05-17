@@ -101,6 +101,12 @@ static const char *volup[]  = { "/home/l/dwm/scripts/vol-up.sh", NULL };
 static const char *voldown[]  = { "/home/l/dwm/scripts/vol-down.sh", NULL };
 static const char *voltoggle[]  = { "/home/l/dwm/scripts/vol-toggle.sh", NULL };
 
+static const char *mpcplay[]  = { "/home/l/dwm/scripts/mpc-play.sh", NULL };
+static const char *mpcstop[]  = { "/home/l/dwm/scripts/mpc-stop.sh", NULL };
+static const char *mpctoggle[]  = { "/home/l/dwm/scripts/mpc-toggle.sh", NULL };
+static const char *mpcprev[]  = { "/home/l/dwm/scripts/mpc-prev.sh", NULL };
+static const char *mpcnext[]  = { "/home/l/dwm/scripts/mpc-next.sh", NULL };
+
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -109,6 +115,13 @@ static const Key keys[] = {
 	{ 0,          	        		XK_F1,     spawn,          {.v = volup } },
 	{ 0,                          	XK_F2,     spawn,          {.v = voldown } },
 	{ 0,                    		XK_F3,     spawn,          {.v = voltoggle } },
+
+	{ 0,                            XK_Home,   spawn,          {.v = mpcplay } },
+	{ 0,                            XK_End,    spawn,          {.v = mpcstop } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = mpctoggle } },
+	{ 0,                        XK_Page_Up,    spawn,          {.v = mpcprev } },
+	{ 0,                        XK_Page_Down,  spawn,          {.v = mpcnext } },
+
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
