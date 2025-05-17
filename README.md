@@ -14,6 +14,7 @@
 ```shell
 # 字体
 sudo pacman -S wqy-microhei ttf-nerd-fonts-symbols
+yay -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-fonts-emoji ttf-liberation ttf-droid
 
 # alsa声音、bc计算器(计算网速)、rofi程序启动器
 sudo pacman -S alsa-utils bc rofi 
@@ -49,6 +50,8 @@ cd ～/dwm && sudo make clean install
 ```
 
 ## 常用快捷键
+默认的MODKEY键为Mod1Mask---[Alt]键;
+Mod4Mask---[win]键
 ```
 默认按键	                我的设置	                实现功能
 [Mod]+[Shift]+[Enter]	    [Mod]+[Shift]+[Enter]	    打开st终端
@@ -74,7 +77,7 @@ cd ～/dwm && sudo make clean install
                             [F3]                        静音
                             [Home]                      mpc play播放音乐
                             [End]                       mpc stop停止播放音乐
-                            [Mod]+[Space]               mpc toggle继续播放/暂停播放
+                            [Mod4Mask]+[Space]          mpc toggle继续播放/暂停播放
                             [PgUp]                      mpc prev上一首
                             [PgDown]                    mpc next下一首
 ```
