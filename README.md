@@ -14,7 +14,7 @@
 ```shell
 # 字体
 sudo pacman -S wqy-microhei ttf-nerd-fonts-symbols
-yay -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-fonts-emoji ttf-liberation ttf-droid
+yay -S ttf-joypixels
 
 # alsa声音、bc计算器(计算网速)、rofi程序启动器
 sudo pacman -S alsa-utils bc rofi 
