@@ -112,9 +112,9 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,          	        		XK_F1,     spawn,          {.v = volup } },
-	{ 0,                          	XK_F2,     spawn,          {.v = voldown } },
-	{ 0,                    		XK_F3,     spawn,          {.v = voltoggle } },
+	{ 0,          	                XK_F2,     spawn,          {.v = volup } },
+	{ 0,                            XK_F3,     spawn,          {.v = voldown } },
+	{ 0,                            XK_F4,     spawn,          {.v = voltoggle } },
 
 	{ 0,                            XK_Home,   spawn,          {.v = mpcplay } },
 	{ 0,                            XK_End,    spawn,          {.v = mpcstop } },
@@ -122,7 +122,7 @@ static const Key keys[] = {
 	{ 0,                        XK_Page_Up,    spawn,          {.v = mpcprev } },
 	{ 0,                        XK_Page_Down,  spawn,          {.v = mpcnext } },
 
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ Mod4Mask,                     XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

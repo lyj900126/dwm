@@ -55,7 +55,7 @@ Mod4Mask---[win]键
 ```
 默认按键	                我的设置	                实现功能
 [Mod]+[Shift]+[Enter]	    [Mod]+[Shift]+[Enter]	    打开st终端
-[Mod]+[P]	                [Mod]+[P]	                打开dmenu程序启动器，或者rofi
+[Mod]+[P]	                [Mod4Mask]+[R]	            打开dmenu程序启动器，或者rofi
 [Mod]+[Enter]	            [Mod]+[Enter]	            将鼠标悬停在工作区的一个窗口，将其与主区域中的窗口交换。
 [Mod]+[Shift]+1..9	        [Mod]+[Shift]+1..9	        通过使用鼠标突出显示后，并按 Alt+Shift+1..9，窗口可以在不同工作区之间移动。
 [Mod]+[Shift]+[C]	        [Mod]+[Q]	                关闭当前窗口
@@ -72,9 +72,9 @@ Mod4Mask---[win]键
 [Mod]+[Shift]+[=]	        [Mod]+[Shift]+[=]	        在使用 [Alt]+[-]/[=] 调整过间距的情况可以用这个快捷键复原（补丁fullgaps）
 [Mod]+[`]	                [Mod]+[`]	                任意时候可以打开一个可隐藏的终端； [`]是反引号键，位于键盘左上角Esc下边（补丁scratchpad）
 [Mod]+[R]	                [Mod]+[R]	                让窗口浮动
-                            [F1]                        增加音量
-                            [F2]                        减少音量
-                            [F3]                        静音
+                            [F2]                        增加音量
+                            [F3]                        减少音量
+                            [F4]                        静音
                             [Home]                      mpc play播放音乐
                             [End]                       mpc stop停止播放音乐
                             [Mod4Mask]+[Space]          mpc toggle继续播放/暂停播放
