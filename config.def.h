@@ -39,7 +39,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static char lockfile[] = "/tmp/dwm.lock";
 
 /* launcher commands (They must be NULL terminated) */
-static const char* rofi[]               = { "rofi", "-show", "drun" };
+static const char* st[]                 = { "st", NULL, NULL };
 static const char* pcmanfm[]            = { "pcmanfm", NULL, NULL };
 static const char* edge[]               = { "microsoft-edge-stable", "https://nas.lxyun.top:13000", NULL };
 static const char* trilium[]            = { "trilium-cn", NULL, NULL };
@@ -49,7 +49,7 @@ static const char* watt_toolkit[]       = { "watt-toolkit", NULL, NULL };
 
 static const Launcher launchers[] = {
        /* command       name to display */
-	{ rofi,              "" },
+	{ st,                "" },
 	{ pcmanfm,           "" },
 	{ edge,              "" },
 	{ trilium,           "" },
@@ -97,31 +97,54 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+/* 自定义音量控制脚本 */
 static const char *volup[]  = { "/home/l/dwm/scripts/vol-up.sh", NULL };
 static const char *voldown[]  = { "/home/l/dwm/scripts/vol-down.sh", NULL };
 static const char *voltoggle[]  = { "/home/l/dwm/scripts/vol-toggle.sh", NULL };
 
+/* 自定义mpd、mpc音乐播放器控制脚本 */
 static const char *mpcplay[]  = { "/home/l/dwm/scripts/mpc-play.sh", NULL };
 static const char *mpcstop[]  = { "/home/l/dwm/scripts/mpc-stop.sh", NULL };
 static const char *mpctoggle[]  = { "/home/l/dwm/scripts/mpc-toggle.sh", NULL };
 static const char *mpcprev[]  = { "/home/l/dwm/scripts/mpc-prev.sh", NULL };
 static const char *mpcnext[]  = { "/home/l/dwm/scripts/mpc-next.sh", NULL };
 
+/* 打开额外的终端命令 */
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
+/* 打开任务栏固定程序命令(部分) */
+static const char *Pcmanfm[]  = { "pcmanfm", NULL };
+static const char *Edge[]  = { "microsoft-edge-stable", "https://nas.lxyun.top:13000", NULL };
+static const char *Trilium[]  = { "trilium-cn", NULL };
+static const char *Wechat[]  = { "wechat-universal", NULL };
+static const char *Sunloginclient[]  = { "sunloginclient", NULL };
+static const char *Watt_toolkit[]  = { "watt_toolkit", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+    /* 自定义添加音量控制快捷键 */
 	{ 0,          	                XK_F2,     spawn,          {.v = volup } },
 	{ 0,                            XK_F3,     spawn,          {.v = voldown } },
 	{ 0,                            XK_F4,     spawn,          {.v = voltoggle } },
 
+    /* 自定义添加控制mpd、mpc音乐播放器快捷键 */
 	{ 0,                            XK_Home,   spawn,          {.v = mpcplay } },
 	{ 0,                            XK_End,    spawn,          {.v = mpcstop } },
 	{ Mod4Mask,                     XK_space,  spawn,          {.v = mpctoggle } },
 	{ 0,                        XK_Page_Up,    spawn,          {.v = mpcprev } },
 	{ 0,                        XK_Page_Down,  spawn,          {.v = mpcnext } },
 
+    /* 自定义添加的打开任务栏程序快捷键 */
+	{ Mod4Mask,                     XK_1,      spawn,          {.v = termcmd } },
+	{ Mod4Mask,                     XK_2,      spawn,          {.v = Pcmanfm } },
+	{ Mod4Mask,                     XK_3,      spawn,          {.v = Edge } },
+	{ Mod4Mask,                     XK_4,      spawn,          {.v = Trilium } },
+	{ Mod4Mask,                     XK_5,      spawn,          {.v = Wechat } },
+	{ Mod4Mask,                     XK_6,      spawn,          {.v = Sunloginclient } },
+	{ Mod4Mask,                     XK_7,      spawn,          {.v = Watt_toolkit } },
+
+    /* dwm原有及补丁添加的常用快捷键 */
 	{ Mod4Mask,                     XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },

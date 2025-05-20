@@ -80,4 +80,5 @@ Mod4Mask---[win]键
                             [Mod4Mask]+[Space]          mpc toggle继续播放/暂停播放
                             [PgUp]                      mpc prev上一首
                             [PgDown]                    mpc next下一首
+                            [Mod4Mask]+[1..9]           打开任务栏对应顺序的程序
 ```
