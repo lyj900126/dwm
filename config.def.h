@@ -38,7 +38,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
 
-/* launcher commands (They must be NULL terminated) */
+/* 启动任务栏程序的参数设置(以 NULL 结束) */
 static const char* st[]                 = { "st", NULL, NULL };
 static const char* pcmanfm[]            = { "pcmanfm", NULL, NULL };
 static const char* edge[]               = { "microsoft-edge-stable", "https://nas.lxyun.top:13000", NULL };
@@ -47,8 +47,9 @@ static const char* wechat[]             = { "wechat-universal", NULL, NULL };
 static const char* sunloginclient[]     = { "sunloginclient", NULL, NULL };
 static const char* watt_toolkit[]       = { "watt-toolkit", NULL, NULL };
 
+/* 固定到任务栏的程序要显示的名字或者图标 */
 static const Launcher launchers[] = {
-       /* command       name to display */
+    /* command       name to display */
 	{ st,                "" },
 	{ pcmanfm,           "" },
 	{ edge,              "" },
