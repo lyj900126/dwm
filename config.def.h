@@ -120,7 +120,7 @@ static const char *Edge[]  = { "microsoft-edge-stable", "https://nas.lxyun.top:1
 static const char *Trilium[]  = { "trilium-cn", NULL };
 static const char *Wechat[]  = { "wechat-universal", NULL };
 static const char *Sunloginclient[]  = { "sunloginclient", NULL };
-static const char *Watt_toolkit[]  = { "watt_toolkit", NULL };
+static const char *Watt_toolkit[]  = { "watt-toolkit", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
