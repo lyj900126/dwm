@@ -121,6 +121,7 @@ static const char *Trilium[]  = { "trilium-cn", NULL };
 static const char *Wechat[]  = { "wechat-universal", NULL };
 static const char *Sunloginclient[]  = { "sunloginclient", NULL };
 static const char *Watt_toolkit[]  = { "watt-toolkit", NULL };
+static const char *qqmusic[]  = { "/home/l/dwm/scripts/qqmusic.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -144,6 +145,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_5,      spawn,          {.v = Wechat } },
 	{ Mod4Mask,                     XK_6,      spawn,          {.v = Sunloginclient } },
 	{ Mod4Mask,                     XK_7,      spawn,          {.v = Watt_toolkit } },
+	{ Mod4Mask,                     XK_q,      spawn,          {.v = qqmusic } },
 
     /* dwm原有及补丁添加的常用快捷键 */
 	{ Mod4Mask,                     XK_r,      spawn,          {.v = dmenucmd } },

@@ -24,6 +24,9 @@ sudo pacman -S mpd mpc ncmpcpp
 
 # 任务栏固定的程序为：rofi启动菜单、pcmanfm文件管理、edge浏览器、trilium笔记、微信、向日葵远程、steam加速器
 yay -S rofi pcmanfm microsoft-edge-stable-bin trilium-cn-bin wechat-universal-bwrap sunloginclient watt-toolkit-bin
+
+# 手动下载qq音乐官网的AppImage包，默认启动路径在~/下载
+
 ```
 
 ## 安装使用
@@ -81,4 +84,5 @@ Mod4Mask---[win]键
                             [PgUp]                      mpc prev上一首
                             [PgDown]                    mpc next下一首
                             [Mod4Mask]+[1..9]           打开任务栏对应顺序的程序
+                            [Mod4Mask]+[q]              打开qq音乐AppImage包
 ```
