@@ -6,7 +6,7 @@ udiskie &       #挂载移动硬盘
 numlockx &      #开启小键盘
 fcitx5 &        #fcitx5输入法
 picom &
-synology-drive &    #群晖同步客户端
+#synology-drive &    #群晖同步客户端
 mpd &
 #slstatus &
 
