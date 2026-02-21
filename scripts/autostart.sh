@@ -7,7 +7,8 @@ numlockx &      #开启小键盘
 fcitx5 &        #fcitx5输入法
 picom &
 #synology-drive &    #群晖同步客户端
-mpd &
+mpd &           #mpd音乐后台进程
+rustdesk &      #桌面远程
 #slstatus &
 
 
