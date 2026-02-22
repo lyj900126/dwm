@@ -45,7 +45,7 @@ static const char* edge[]               = { "microsoft-edge-stable", "https://ho
 static const char* trilium[]            = { "trilium-cn", NULL, NULL };
 static const char* wechat[]             = { "wechat-universal", NULL, NULL };
 static const char* sunloginclient[]     = { "sunloginclient", NULL, NULL };
-static const char* watt_toolkit[]       = { "watt-toolkit", NULL, NULL };
+static const char* virtmanager[]       = { "virt-manager", NULL, NULL };
 
 /* 固定到任务栏的程序要显示的名字或者图标 */
 static const Launcher launchers[] = {
@@ -56,7 +56,7 @@ static const Launcher launchers[] = {
 	{ trilium,           "" },
 	{ wechat,            "" },
 	{ sunloginclient,    "󱟾" },
-	{ watt_toolkit,      "" },
+	{ virtmanager,       "" },
 };
 
 static const Rule rules[] = {
@@ -99,16 +99,16 @@ static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 /* 自定义音量控制脚本 */
-static const char *volup[]  = { "/home/l/dwm/scripts/vol-up.sh", NULL };
-static const char *voldown[]  = { "/home/l/dwm/scripts/vol-down.sh", NULL };
-static const char *voltoggle[]  = { "/home/l/dwm/scripts/vol-toggle.sh", NULL };
+static const char *volup[]  = { "./dwm/scripts/vol-up.sh", NULL };
+static const char *voldown[]  = { "./dwm/scripts/vol-down.sh", NULL };
+static const char *voltoggle[]  = { "./dwm/scripts/vol-toggle.sh", NULL };
 
 /* 自定义mpd、mpc音乐播放器控制脚本 */
-static const char *mpcplay[]  = { "/home/l/dwm/scripts/mpc-play.sh", NULL };
-static const char *mpcstop[]  = { "/home/l/dwm/scripts/mpc-stop.sh", NULL };
-static const char *mpctoggle[]  = { "/home/l/dwm/scripts/mpc-toggle.sh", NULL };
-static const char *mpcprev[]  = { "/home/l/dwm/scripts/mpc-prev.sh", NULL };
-static const char *mpcnext[]  = { "/home/l/dwm/scripts/mpc-next.sh", NULL };
+static const char *mpcplay[]  = { "./dwm/scripts/mpc-play.sh", NULL };
+static const char *mpcstop[]  = { "./dwm/scripts/mpc-stop.sh", NULL };
+static const char *mpctoggle[]  = { "./dwm/scripts/mpc-toggle.sh", NULL };
+static const char *mpcprev[]  = { "./dwm/scripts/mpc-prev.sh", NULL };
+static const char *mpcnext[]  = { "./dwm/scripts/mpc-next.sh", NULL };
 
 /* 打开额外的终端命令 */
 static const char scratchpadname[] = "scratchpad";
@@ -120,8 +120,8 @@ static const char *Edge[]  = { "microsoft-edge-stable", "https://homepage.nas.lx
 static const char *Trilium[]  = { "trilium-cn", NULL };
 static const char *Wechat[]  = { "wechat-universal", NULL };
 static const char *Sunloginclient[]  = { "sunloginclient", NULL };
-static const char *Watt_toolkit[]  = { "watt-toolkit", NULL };
-static const char *qqmusic[]  = { "/home/l/dwm/scripts/qqmusic.sh", NULL };
+static const char *Virtmanager[]  = { "virt-manager", NULL };
+static const char *qqmusic[]  = { "./dwm/scripts/qqmusic.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -144,7 +144,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_4,      spawn,          {.v = Trilium } },
 	{ Mod4Mask,                     XK_5,      spawn,          {.v = Wechat } },
 	{ Mod4Mask,                     XK_6,      spawn,          {.v = Sunloginclient } },
-	{ Mod4Mask,                     XK_7,      spawn,          {.v = Watt_toolkit } },
+	{ Mod4Mask,                     XK_7,      spawn,          {.v = Virtmanager } },
 	{ Mod4Mask,                     XK_q,      spawn,          {.v = qqmusic } },
 
     /* dwm原有及补丁添加的常用快捷键 */
