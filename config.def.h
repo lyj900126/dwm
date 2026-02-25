@@ -44,19 +44,21 @@ static const char* pcmanfm[]            = { "pcmanfm", NULL, NULL };
 static const char* edge[]               = { "microsoft-edge-stable", "https://homepage.nas.lxyun.top:19999", NULL };
 static const char* trilium[]            = { "trilium-cn", NULL, NULL };
 static const char* wechat[]             = { "wechat-universal", NULL, NULL };
-static const char* sunloginclient[]     = { "sunloginclient", NULL, NULL };
-static const char* virtmanager[]       = { "virt-manager", NULL, NULL };
+static const char* rustdesk[]           = { "rustdesk", NULL, NULL };
+static const char* virtmanager[]        = { "virt-manager", NULL, NULL };
+static const char* wps[]                = { "wps", NULL, NULL };
 
 /* 固定到任务栏的程序要显示的名字或者图标 */
 static const Launcher launchers[] = {
     /* command       name to display */
-	{ st,                "" },
+	{ st,                "" },
 	{ pcmanfm,           "" },
 	{ edge,              "" },
 	{ trilium,           "" },
 	{ wechat,            "" },
-	{ sunloginclient,    "󱟾" },
+	{ rustdesk,          "" },
 	{ virtmanager,       "" },
+	{ wps,               "" },
 };
 
 static const Rule rules[] = {
@@ -114,14 +116,15 @@ static const char *mpcnext[]  = { "./dwm/scripts/mpc-next.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
-/* 打开任务栏固定程序命令(部分) */
-static const char *Pcmanfm[]  = { "pcmanfm", NULL };
-static const char *Edge[]  = { "microsoft-edge-stable", "https://homepage.nas.lxyun.top:19999", NULL };
-static const char *Trilium[]  = { "trilium-cn", NULL };
-static const char *Wechat[]  = { "wechat-universal", NULL };
-static const char *Sunloginclient[]  = { "sunloginclient", NULL };
-static const char *Virtmanager[]  = { "virt-manager", NULL };
-static const char *qqmusic[]  = { "./dwm/scripts/qqmusic.sh", NULL };
+/* 设置指定代号，关联打开任务栏固定程序命令(部分) */
+static const char *Pcmanfm[]    = { "pcmanfm", NULL };
+static const char *Edge[]       = { "microsoft-edge-stable", "https://homepage.nas.lxyun.top:19999", NULL };
+static const char *Trilium[]    = { "trilium-cn", NULL };
+static const char *Wechat[]     = { "wechat-universal", NULL };
+static const char *Rustdesk[]  = { "rustdesk", NULL };
+static const char *Virtmanager[]     = { "virt-manager", NULL };
+static const char *WPS[]        = { "wps", NULL };
+static const char *qqmusic[]    = { "./dwm/scripts/qqmusic.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -137,14 +140,15 @@ static const Key keys[] = {
 	{ 0,                        XK_Page_Up,    spawn,          {.v = mpcprev } },
 	{ 0,                        XK_Page_Down,  spawn,          {.v = mpcnext } },
 
-    /* 自定义添加的打开任务栏程序快捷键 */
+    /* 配合前面指定的代号，自定义添加的打开任务栏程序快捷键 */
 	{ Mod4Mask,                     XK_1,      spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_2,      spawn,          {.v = Pcmanfm } },
 	{ Mod4Mask,                     XK_3,      spawn,          {.v = Edge } },
 	{ Mod4Mask,                     XK_4,      spawn,          {.v = Trilium } },
 	{ Mod4Mask,                     XK_5,      spawn,          {.v = Wechat } },
-	{ Mod4Mask,                     XK_6,      spawn,          {.v = Sunloginclient } },
+	{ Mod4Mask,                     XK_6,      spawn,          {.v = Rustdesk } },
 	{ Mod4Mask,                     XK_7,      spawn,          {.v = Virtmanager } },
+	{ Mod4Mask,                     XK_8,      spawn,          {.v = WPS } },
 	{ Mod4Mask,                     XK_q,      spawn,          {.v = qqmusic } },
 
     /* dwm原有及补丁添加的常用快捷键 */
